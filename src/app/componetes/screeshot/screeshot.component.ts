@@ -9,12 +9,17 @@ import { Screenshot } from "@ionic-native/screenshot/ngx";
 export class ScreeshotComponent implements OnInit {
   constructor( private screenshot: Screenshot) {}
   screen: any;
+  uri: any;
   state: boolean = false;
 
   ngOnInit() {}
+
+
+  
   screenShot() {
       this.screenshot.save("jpg", 80, "myscreenshot.jpg").then((res) => {
       this.screen = res.filePath;
+      this.uri = res.filePath;
       this.state = true;
       this.reset();
     });
@@ -31,6 +36,7 @@ export class ScreeshotComponent implements OnInit {
   screenShotURI() {
     this.screenshot.URI(80).then((res) => {
       this.screen = res.URI;
+      this.uri = res.URI;
       this.state = true;
       this.reset();
     });
