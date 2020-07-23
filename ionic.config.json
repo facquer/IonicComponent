@@ -1,0 +1,8 @@
+{
+  "name": "IonicComponente",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
