@@ -59,8 +59,26 @@ Por ultimo tenemos un metodo el cual nos permite recuperar la ultima de pantalla
 
 
 ## Despliegue 📦
+![alt text](https://fotos.subefotos.com/b79ae4749cb4c147ca375bb655c6ac2fo.png) <br> 
+![alt text](https://fotos.subefotos.com/a70ba5a5e091a495eeefb19d77b60ecao.png) <br> 
 
+# Componente: AdMobFree (Publicidad)
 
+Este componente aun no esta terminado ya que presenta errores, sin embargo dejo la instalacion para que el docente intente identificar el problema. Por ultimo todo el codigo desarrollado tambien se encuentra subido en el componente Publicidad.
+
+### Instalación 🔧
+
+```
+npm install cordova-plugin-admob-free
+```
+
+```
+npm install @ionic-native/admob-free
+```
+
+```
+ionic cap sync
+```
 
 
 ## Autores ✒️
