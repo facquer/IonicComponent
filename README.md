@@ -1,67 +1,71 @@
-Componente: Screenshot
-Este componente nos permtie realizar capturas de pantalla directamente de la aplicacion.
+# Componente: Screenshot
 
-Comenzando 🚀
-Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+Este componente nos permite hacer capturas de pantalla directamente desde la aplicacion, muy util para compartir transferencia bancarias. 
 
-Mira Deployment para conocer como desplegar el proyecto.
+### Pre-requisitos 📋
 
-Pre-requisitos 📋
-Que cosas necesitas para instalar el software y como instalarlas
+Antes de comenzar debemos crear un componente en ionic, esto nos permite poder reutilizar en cualquier pagina que deseemos 
 
-Da un ejemplo
-Instalación 🔧
-Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose
+```
+ionic generate component componentes/screenshot
+```
 
-Dí cómo será ese paso
+### Instalación 🔧
 
-Da un ejemplo
-Y repite
+Bueno lo primero que debemos hacer es instalar el componente  
 
-hasta finalizar
-Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo
+```
+npm install com.darktalker.cordova.screenshot
+```
 
-Ejecutando las pruebas ⚙️
-Explica como ejecutar las pruebas automatizadas para este sistema
+```
+npm install @ionic-native/screenshot
+```
 
-Analice las pruebas end-to-end 🔩
-Explica que verifican estas pruebas y por qué
+```
+ionic cap sync
+```
 
-Da un ejemplo
-Y las pruebas de estilo de codificación ⌨️
-Explica que verifican estas pruebas y por qué
+Una ves tenemos descargado nuestro componente, hay que editar el app.module.ts, para ello importamos lo siguiente:
 
-Da un ejemplo
-Despliegue 📦
-Agrega notas adicionales sobre como hacer deploy
+```
+import { Screenshot } from '@ionic-native/screenshot/ngx';
+```
+Y luego en los providers ponemos:
 
-Construido con 🛠️
-Menciona las herramientas que utilizaste para crear tu proyecto
+```
+Screenshot
+```
 
-Dropwizard - El framework web usado
-Maven - Manejador de dependencias
-ROME - Usado para generar RSS
-Contribuyendo 🖇️
-Por favor lee el CONTRIBUTING.md para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+Por ultimos debemos recordar implementar el metodo en la pagina que querramos usarlo editando su module.ts y por ultimo colocamos el componente en el html:
 
-Wiki 📖
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra Wiki
+```
+<app-screeshot></app-screeshot>
+```
 
-Versionado 📌
-Usamos SemVer para el versionado. Para todas las versiones disponibles, mira los tags en este repositorio.
 
-Autores ✒️
-Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
+## Codigo del componente ⚙️
 
-Andrés Villanueva - Trabajo Inicial - villanuevand
-Fulanito Detal - Documentación - fulanitodetal
-También puedes mirar la lista de todos los contribuyentes quíenes han participado en este proyecto.
+Para el componente en la parte de html creamos el siguiente codigo  <br> 
+![alt text](https://fotos.subefotos.com/e4d700fd79744e2ddf25a1af4224a6e6o.png) <br> 
+El cual posee dos botones para invocar los metodos, una variable output para poder mostrar la imagen en la pantalla y por ultimo otra variable que nos da la URL de la imagen la cual nos permitira integrarla con otros componente si deseamos. <br> 
 
-Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
+En el screenshot.component.ts programamos los dos metodos que invocamos en el html: <br> 
+![alt text](https://fotos.subefotos.com/b7c841ac5d652f290d33526ea8a1bb5eo.png) <br> 
+Aca presentamos dos metodos el primero el cual permite crear y guardar la imagen, para ello le pasamos los parametros el cual son la extension de la imagen y el nombre que tendra, por ultimos mandamos a presentarla y con su URL tambien, tenemos otro metodo que se llama reset() el cual resetea estos parametros pasado 4 segundos <br> 
 
-Expresiones de Gratitud 🎁
-Comenta a otros sobre este proyecto 📢
-Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
-Da las gracias públicamente 🤓.
-etc.
+Por ultimo tenemos un metodo el cual nos permite recuperar la ultima de pantalla que se realizo, de igual manera este metodo tambien presenta en la pantalla la imagen y su URL <br> 
+![alt text](https://fotos.subefotos.com/564be82cd6283845ebec7eadeabea7f6o.png) <br> 
+
+
+## Despliegue 📦
+
+
+
+
+## Autores ✒️
+
+
+* **Angel Ruiz** - *Programacion* - [Angel Ruiz](https://github.com/facquer)
+* **Angel Ruiz** - *Documentación*
+
